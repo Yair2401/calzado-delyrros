@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calzado Delyrros | Tenis Adidas - Landing</title>
+  <meta name="description" content="Calzado Delyrros - Tenis Adidas para dama y caballero. Tallas 35 a 43. Envío nacional y pago contraentrega." />
+  <meta property="og:title" content="Calzado Delyrros | Tenis Adidas" />
+  <meta property="og:description" content="Tallas 35 a 43 · Envío nacional · Pago contraentrega" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👟</text></svg>">
+  <style>
+    :root{
+      --bg:#0b0b0c;--card:#121316;--soft:#1b1d22;--accent:#00d084;--accent-2:#21a1f1;--text:#f7f7f7;--muted:#a7aab3;--bad:#ff5a5f;--ok:#ffd166;--good:#06d6a0;
+      --radius:18px;--shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 70% -10%, rgba(33,161,241,.15), transparent),radial-gradient(800px 500px at -10% 10%, rgba(0,208,132,.12), transparent),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0acfa2 50%, var(--accent-2));display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo span{font-weight:800;color:#00130b}
+    nav{display:flex;gap:18px;color:var(--muted);font-weight:600}
+    nav a:hover{color:var(--text)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:18px 0 8px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(33,161,241,.12);color:#cfe9fb;border:1px solid rgba(33,161,241,.35);padding:6px 10px;border-radius:999px;font-size:12px}
+    h1{font-size:40px;line-height:1.1;margin:12px 0 10px}
+    .lead{color:#dfe4ea}
+    .hero-cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid transparent;background:var(--accent);color:#022d1d;font-weight:800;box-shadow:var(--shadow);cursor:pointer}
+    .btn.secondary{background:transparent;border-color:#2c323b;color:#e8ecf2}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+    /* Product card */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--card);border:1px solid #23262e;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .card .wrap{padding:18px}
+    .product-gallery{position:relative;border-radius:14px;overflow:hidden;background:var(--soft);}
+    .product-gallery img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;}
+    .thumbs{display:flex;gap:10px;margin-top:10px}
+    .thumbs img{width:64px;height:64px;border-radius:10px;border:2px solid transparent;cursor:pointer;object-fit:cover;}
+    .thumbs img.active{border-color:var(--accent)}
+
+    .price{display:flex;align-items:end;gap:10px;margin:8px 0 14px}
+    .price .now{font-size:28px;font-weight:900;color:#bef5e1}
+    .price .before{color:var(--muted);text-decoration:line-through}
+    .stock{display:flex;align-items:center;gap:8px;font-size:14px;color:#cde7df}
+    .timer{background:#15201b;border:1px solid #214b3b;color:#a8e7cf;border-radius:12px;padding:8px 10px;display:inline-flex;gap:8px;align-items:center;font-weight:700}
+
+    .options{display:grid;gap:10px;margin:14px 0}
+    .sizes{display:flex;flex-wrap:wrap;gap:8px}
+    .sizes button{min-width:44px;padding:10px;border-radius:10px;border:1px solid #2b2f36;background:#14161b;color:#eaf3ff;cursor:pointer}
+    .sizes button.active{border-color:var(--accent);background:#0d1f19;color:#caffef}
+
+    .policy-icons{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+    .policy-icons .pi{background:#12171f;border:1px solid #2a2f36;border-radius:12px;padding:10px;font-size:12px;color:#c9d2df}
+
+    /* Sections */
+    section{margin-top:36px}
+    h2{font-size:28px;margin:0 0 10px}
+    .policies{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .policy{background:var(--card);border:1px solid #23262e;border-radius:16px;padding:16px}
+    .policy h3{margin:0 0 6px}
+    .policy p{margin:.25rem 0;color:#c7c9d3}
+
+    footer{margin-top:36px;padding:24px 0;color:#aab2bf;border-top:1px solid #23262e}
+
+    /* Toast */
+    .toast{position:fixed;right:16px;bottom:-80px;background:#0f1419;border:1px solid #273039;color:#dff6ea;padding:12px 14px;border-radius:12px;box-shadow:var(--shadow);transition:all .35s ease;z-index:50}
+    .toast.show{bottom:16px}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:1fr}
+      h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><span>CD</span></div>
+        <div>
+          <strong>Calzado Delyrros</strong><br>
+          <small style="color:var(--muted)">Moda • Comodidad • Estilo</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#producto">Producto</a>
+        <a href="#politicas">Políticas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">Nuevo ingreso · Stock limitado</span>
+        <h1>Tenis Adidas Originales<br/> Tallas 35 a 43</h1>
+        <p class="lead">Comodidad premium y estilo urbano para tu día a día. Envío a nivel nacional y opción de pago contraentrega.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#producto">Ver oferta</a>
+          <a class="btn secondary" href="#politicas">Leer políticas</a>
+        </div>
+        <div style="margin-top:14px" class="timer" id="timer" aria-live="polite">Oferta termina en: <span id="countdown">--:--:--</span></div>
+      </div>
+      <div class="card">
+        <div class="wrap">
+          <div class="product-gallery">
+            <img id="mainImg" alt="Tenis Adidas" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"/>
+          </div>
+          <div class="thumbs" id="thumbs">
+            <img class="active" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400&auto=format&fit=crop" alt="vista 1"/>
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=400&auto=format&fit=crop" alt="vista 2"/>
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=400&auto=format&fit=crop" alt="vista 3"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="producto" class="grid">
+      <div class="card">
+        <div class="wrap">
+          <h2>Tenis Adidas – Negro con Blanco</h2>
+          <div class="price">
+            <div class="now">$179.900</div>
+            <div class="before">$239.900</div>
+            <div class="stock" id="stock">Quedan 12 en stock</div>
+          </div>
+          <p>Ideales para uso diario, caminatas y outfits casuales. Plantilla acolchada, suela antideslizante y materiales resistentes para mayor durabilidad.</p>
+          <div class="options">
+            <div>
+              <strong>Selecciona tu talla</strong>
+              <div class="sizes" id="sizes"></div>
+            </div>
+            <div>
+              <label for="cantidad"><strong>Cantidad</strong></label>
+              <input id="cantidad" type="number" min="1" max="5" value="1" style="width:90px;padding:10px;border-radius:10px;border:1px solid #2b2f36;background:#14161b;color:#eaf3ff"/>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <button class="btn" id="btnCart">Agregar al carrito</button>
+            <a class="btn secondary" id="btnWhats" target="_blank" rel="noopener">Comprar por WhatsApp</a>
+          </div>
+          <div class="policy-icons">
+            <div class="pi">🚚 Envío nacional</div>
+            <div class="pi">💳 Contraentrega*</div>
+            <div class="pi">🔁 Cambios 7 días</div>
+          </div>
+          <small style="display:block;margin-top:8px;color:#8ea3b5">*Sujeto a cobertura de la transportadora.</small>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="wrap">
+          <h2>Detalles y Beneficios</h2>
+          <ul style="line-height:1.8;color:#cbd6e2;padding-left:18px">
+            <li>Material exterior respirable y fácil de limpiar.</li>
+            <li>Plantilla ergonómica para mayor comodidad.</li>
+            <li>Suela con agarre para diferentes superficies.</li>
+            <li>Diseño clásico que combina con todo.</li>
+            <li>Garantía por defecto de fábrica de 30 días.</li>
+          </ul>
+          <hr style="border:0;border-top:1px solid #23262e;margin:14px 0"/>
+          <h3>Opiniones (4.8/5)</h3>
+          <p style="color:#e8f7ff">★★★★★ <span style="color:#9fb3c7">Basado en 124 reseñas</span></p>
+          <p style="color:#c7cfe0">“Excelente calidad, cómodos para caminar todo el día. Llegaron rápido.” — <em>Carolina P.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="politicas">
+      <h2>Políticas de Calzado Delyrros</h2>
+      <div class="policies">
+        <article class="policy">
+          <h3>Envíos</h3>
+          <p>Realizamos envíos a nivel nacional a través de transportadoras aliadas. Los tiempos de entrega estimados son de 1 a 5 días hábiles según tu ciudad.</p>
+          <p>El costo de envío se calcula al finalizar la compra. En fechas de alta demanda el tiempo puede extenderse.</p>
+        </article>
+        <article class="policy">
+          <h3>Pago</h3>
+          <p>Aceptamos transferencias, tarjetas y <strong>pago contraentrega</strong> en ciudades con cobertura. Los datos de pago se enviarán de forma segura al confirmar tu pedido.</p>
+          <p>Los precios incluyen impuestos. Promociones no acumulables.</p>
+        </article>
+        <article class="policy">
+          <h3>Cambios y Devoluciones</h3>
+          <p>Dispones de 7 días calendario para solicitar cambio por talla o modelo. El producto debe estar sin uso, en su empaque original y con etiquetas.</p>
+          <p>Para devoluciones por retracto dentro de 5 días, se aplican términos de la ley de comercio aplicable. Costos de transporte no reembolsables salvo error nuestro.</p>
+        </article>
+        <article class="policy">
+          <h3>Garantía</h3>
+          <p>Garantía de 30 días por defectos de fabricación. No cubre desgaste por uso indebido, humedad extrema o fricción abrasiva.</p>
+        </article>
+        <article class="policy">
+          <h3>Privacidad</h3>
+          <p>Protegemos tus datos personales y solo los usamos para procesar pedidos y comunicaciones. Puedes solicitar la eliminación o actualización de tus datos en cualquier momento.</p>
+        </article>
+        <article class="policy">
+          <h3>Términos del Sitio</h3>
+          <p>El uso de este sitio implica la aceptación de nuestras políticas. La disponibilidad de tallas y precios puede cambiar sin previo aviso.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <div class="card"><div class="wrap">
+        <p>¿Tienes dudas sobre tallas, envíos o pagos? Escríbenos y te ayudamos.</p>
+        <p><strong>WhatsApp:</strong> <a href="#" id="waLinkView">+57 300 000 0000</a></p>
+        <p><strong>Instagram:</strong> @calzado_delyrros</p>
+        <p><strong>Email:</strong> ventas@delyrros.com</p>
+      </div></div>
+    </section>
+
+    <footer>
+      <div class="container" style="padding:0">
+        <small>© <span id="year"></span> Calzado Delyrros. Todos los derechos reservados. — Hecho con ❤️</small>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">Añadido al carrito. ¡Completa tu compra por WhatsApp! 👇</div>
+
+  <script>
+    // ======= Helpers =======
+    const sizesWrap = document.getElementById('sizes');
+    const sizeRange = Array.from({length: 9}, (_,i)=> 35 + i); // 35..43
+    const phone = '573000000000'; // <— Reemplaza con tu número en formato internacional sin +
+    const product = 'Tenis Adidas - Negro con Blanco';
+    const mainImg = document.getElementById('mainImg');
+    const thumbs = document.getElementById('thumbs');
+    const btnCart = document.getElementById('btnCart');
+    const btnWhats = document.getElementById('btnWhats');
+    const qty = document.getElementById('cantidad');
+    const toast = document.getElementById('toast');
+    const stockEl = document.getElementById('stock');
+
+    // Render sizes
+    let selectedSize = null;
+    sizeRange.forEach(t => {
+      const b = document.createElement('button');
+      b.innerText = t;
+      b.setAttribute('type','button');
+      b.addEventListener('click',()=>{
+        selectedSize = t;
+        document.querySelectorAll('.sizes button').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        updateWhatsLink();
+      })
+      sizesWrap.appendChild(b);
+    });
+
+    // Thumbs
+    thumbs.addEventListener('click', (e)=>{
+      if(e.target.tagName==='IMG'){
+        document.querySelectorAll('.thumbs img').forEach(x=>x.classList.remove('active'));
+        e.target.classList.add('active');
+        mainImg.src = e.target.src.replace('w=400','w=1200');
+      }
+    });
+
+    // WhatsApp link builder
+    function updateWhatsLink(){
+      const q = Number(qty.value)||1;
+      const size = selectedSize? `Talla: ${selectedSize}` : 'Talla: por confirmar';
+      const text = `Hola, quiero comprar ${q} unidad(es) de \n${product}.\n${size}.\n¿Tienen disponible?`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+      btnWhats.href = url;
+      document.getElementById('waLinkView').href = url;
+    }
+
+    qty.addEventListener('input', updateWhatsLink);
+    updateWhatsLink();
+
+    // Add to cart (simulado)
+    btnCart.addEventListener('click',()=>{
+      if(!selectedSize){
+        alert('Por favor selecciona tu talla (35 a 43)');
+        return;
+      }
+      showToast();
+      // Reducir stock de forma visual
+      const current = Number(stockEl.textContent.match(/\d+/)?.[0]||12);
+      const newVal = Math.max(0, current - Number(qty.value||1));
+      stockEl.textContent = `Quedan ${newVal} en stock`;
+      updateWhatsLink();
+    });
+
+    function showToast(){
+      toast.classList.add('show');
+      setTimeout(()=> toast.classList.remove('show'), 3000);
+    }
+
+    // Countdown (24h rolling)
+    const end = Date.now() + 24*60*60*1000;
